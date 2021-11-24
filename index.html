@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- メタタグ -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- fontawesome -->
+  <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet">
+
+  <title>Page 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="target">
+    <div class="vh-100 d-flex justify-content-center align-items-center bg-dark">
+      <div class="d-flex align-items-center col-10 col-md-7">
+        <!-- １ページ -->
+        <div id="initial-form" class="bg-white p-4 col-12">
+          <h2 class="text-center pb-3">Please type your information below</h2>
+          <form onsubmit="initializeUserAccount(); event.preventDefault()">
+            <div class="form-group">
+              <input id="email" name="email" type="email" placeholder="Email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input id="firstName" name="firstName" type="text" placeholder="First name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input id="lastName" name="lastName" type="text" placeholder="Last name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <input id="initialDeposit" name="initialDeposit" type="number" placeholder="Enter your first deposit" class="form-input" required>
+            </div>
+            <div class="form-group text-center">
+              <div class="form-check">
+                <input name="type" type="radio" value="Savings" checked>
+                <label for="savings" class="form-check-label" required>Savings</label>
+              </div>
+              <div class="form-check">
+                <input name="type" type="radio" value="Checking">
+                <label for="checking" class="form-check-label" required>Checking</label>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="btn bg-primary text-white w-100">Submit</button>
+            </div>
+          </form>
+        </div>
+        <!-- ２ページ -->
+        <div id="bankPage" class="wrapper col-12 text-white">
+        </div>
+        <!-- menuの先のページ -->
+        <div id="sidePage" class="bg-white col-12 text-center"></div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
